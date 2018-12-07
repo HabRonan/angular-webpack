@@ -6,7 +6,7 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 
 app.set('view engine', 'html');
-app.set('views', 'dist');
+app.set('views', 'src');
 
 app.use('/', express.static('dist', { index: false }));
 
