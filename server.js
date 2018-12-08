@@ -8,7 +8,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', 'src');
 
-app.use('/', express.static('dist', { index: false }));
+app.use('/', express.static(__dirname + '/src'));
 
 app.get('/*', (req, res) => {
    res.render('./index', {req, res});
